@@ -116,10 +116,12 @@ document.addEventListener("DOMContentLoaded", listAllFoods);
 
 const listKoreaFoods = () => {
   let koreaFoods = "";
-  if (item.category === "Korea") {
-    koreaFoods += createFoods(item);
-  }
-  menuSection.innerHTML = koreaFoods;
+  menu.map((item) => {
+    if (item.category === "Korea") {
+      koreaFoods += createFoods(item);
+    }
+    menuSection.innerHTML = koreaFoods;
+  });
 };
 document.querySelector("#korea").addEventListener("click", listKoreaFoods);
 
@@ -127,10 +129,12 @@ document.querySelector("#korea").addEventListener("click", listKoreaFoods);
 
 const listJapanFoods = () => {
   let japanFoods = "";
-  if (item.category === "Japan") {
-    japanFoods += createFoods(item);
-  }
-  menuSection.innerHTML = japanFoods;
+  menu.map((item) => {
+    if (item.category === "Japan") {
+      japanFoods += createFoods(item);
+    }
+    menuSection.innerHTML = japanFoods;
+  });
 };
 document.querySelector("#japan").addEventListener("click", listJapanFoods);
 
@@ -138,10 +142,12 @@ document.querySelector("#japan").addEventListener("click", listJapanFoods);
 
 const listChinaFoods = () => {
   let chinaFoods = "";
-  if (item.category === "China") {
-    chinaFoods += createFoods(item);
-  }
-  menuSection.innerHTML = chinaFoods;
+  menu.map((item) => {
+    if (item.category === "China") {
+      chinaFoods += createFoods(item);
+    }
+    menuSection.innerHTML = chinaFoods;
+  });
 };
 document.querySelector("#china").addEventListener("click", listChinaFoods);
 
